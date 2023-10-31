@@ -9,13 +9,8 @@ function findAllEvenNumbers(num: number[]): number[] {
     return num.filter(isEven);
 }
 
-function findMax(num: number[]): number {
-    let max: number = 0;
-    for (let i = 0; i < num.length; i++) {
-        if (num[i] > max) {
-            max = num[i];
-        }
-    }
+function findMax(nums: number[]): number {
+    const max: number = nums.reduce((a, b) => Math.max(a, b));
     return max;
 }
 
